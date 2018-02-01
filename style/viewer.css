@@ -1,0 +1,98 @@
+.viewer-container {
+	height: 100%;
+	width: 100%;
+	float: left;
+}
+
+.viewer-load {
+	width: 100%;
+	float: left;
+}
+
+.ts3_viewer {
+	width: 100%;
+	float: left;
+}
+
+.ts3_viewer .server {
+	text-align: center;
+	font-size: 3rem;
+	cursor: pointer
+}
+
+.server img {
+	display: none;
+}
+
+.corpus img {
+	height: 100%;
+	width: auto;
+}
+
+.prefix {
+	display: none;
+}
+
+.suffix img {
+	float: right;
+	height: 100%;
+	width: auto;
+}
+
+.ts3_viewer .spacer {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background-color: #bcbfc4;
+}
+
+.spacer img {
+	display: none;
+}
+
+.ts3_viewer.channel {
+	cursor: pointer;
+}
+
+.channel.corpus {
+	font-weight: bold;
+	font-size: 1.2rem;
+	float: left;
+}
+
+.channel.corpus img {
+	display: none;
+}
+
+.ts3_viewer .channel .suffix {
+	float: right;
+}
+
+.client {
+	cursor: pointer;
+}
+
+.ts3_viewer .client.corpus {
+	padding-left: 20px;
+}
+
+.ts3_viewer .query {
+	display: none;
+}
+
+.reload {
+	width: 100%;
+	float: left;
+	background-color: #bcbfc4;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.load-cover {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/Teamspeak.gif) center no-repeat #fff;
+
+}

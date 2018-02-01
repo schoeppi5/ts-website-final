@@ -1,0 +1,82 @@
+.chat-center {
+	display: block;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+	height: 50%;
+	padding-top: 5%;
+}
+
+.chat-heading {
+	width: 100%;
+	font-size: 1.5rem;
+}
+
+.chat-text {
+	display: block;
+	box-sizing: border-box;
+	padding: 10px;
+	width: 100%;
+	background-color: white;
+	overflow-y: scroll;
+	height: 75%;
+}
+
+.chat-controls {
+	width: 100%;
+	display: block;
+	margin-top: 10px;
+}
+
+#msg {
+	width: 75%;
+	margin: 0;
+	float: left;
+}
+
+#submit {
+	width: 25%;
+	margin: 0;
+	float: left;
+}
+
+#max {
+	width: 100%;
+	float: left;
+	font-size: 1rem;
+}
+
+.message {
+	width: 100%;
+	float: left;
+	margin-bottom: 5px;
+}
+
+.msg-text {
+	width: auto;
+	display: inline-block;
+	max-width: 100%;
+	overflow-wrap: break-word;
+	border-radius: 5px;
+	font-size: 1rem;
+	background-color: lightgrey;
+	color: white;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.msg-date {
+	display: block;
+	width: 100%;
+	font-size: 0.75rem;
+}
+
+.own {
+	text-align: right;
+}
+
+.own-text {
+	background-color: grey;
+}

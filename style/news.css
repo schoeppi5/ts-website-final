@@ -1,0 +1,64 @@
+.news-con {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.5em !IMPORTANT;
+	background-color: white;
+	padding: 20px;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+.news-con h1 {
+	font-size: 3em !IMPORTANT;
+}
+
+.news-con h2 {
+	font-size: 2.5em !IMPORTANT;
+}
+
+.news-con h3 {
+	font-size: 2em !IMPORTANT;
+}
+
+.news-con h4 {
+	font-size: 1.5em !IMPORTANT;
+}
+
+.news-con li, .news-con li strong, .news-con a {
+	font-size: 1.5em !IMPORTANT;
+}
+
+.news-con a {
+	color: black;
+}
+
+.news-con ol {
+	margin-left: 50px;
+}
+
+@media screen and (max-width: 800px) {
+	.news-con {
+		width: 90%;
+		padding: 10px;
+		font-size: 1em;
+	}
+	.news-con h1 {
+		font-size: 1.75em !IMPORTANT;
+	}
+	.news-con h2 {
+		font-size: 1.5em !IMPORTANT;
+	}
+	.news-con h3 {
+		font-size: 1.25em !IMPORTANT;
+	}
+	.news-con h4 {
+		font-size: 1em !IMPORTANT;
+	}
+	.news-con li, .news-con li strong, .news-con a {
+		font-size: 1em !IMPORTANT;
+	}
+	.news-con ol {
+		margin-left: 20px;
+	}
+}

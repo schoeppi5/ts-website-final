@@ -1,0 +1,8 @@
+{
+	"embed": true,
+	"server":
+	{
+		"address": "37.120.184.91",
+		"port": "9987"
+	}
+}
