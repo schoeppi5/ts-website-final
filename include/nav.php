@@ -16,6 +16,7 @@
 				<!--<a onClick="dropDown()">&#9776;</a> <-- Alternative -->
 				<li class="drop"><a id="home" href="index.php"><?php echo $config["general"]["home"]?></a></li>
 				<li class="drop normal"><a href="rules.php"><?php echo $config["general"]["nav1"]?></a></li>
+				<li class="drop normal"><a href="report.php"><?php echo $config["general"]["nav2"]?></a></li>
 				<li class="right drop normal"><a id="lang-btn"><?php echo $config["general"]["lang"]?></a>
 					<div class="lang-con">
 						<ul>

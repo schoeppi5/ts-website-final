@@ -12,7 +12,14 @@
 	
 	try
 	{
-		$server = new SourceServer($config["gm"]["host"], $config["gm"]["port"]);
+		if(isset($_POST['init']))
+		{
+			$server = new SourceServer($config["gm"]["host"], $config["gm"]["port"], 1000);
+		}
+		else
+		{
+			$server = new SourceServer($config["gm"]["host"], $config["gm"]["port"], 6000);
+		}
 		$server->initialize();
 		$info = $server->getServerInfo();
 		

@@ -12,7 +12,7 @@
 ## 2. Administration
 1. Admins und Moderatoren sind grundsätzlich alles Besitzer des Suchtclub.de Servers!
 2. Jeder Moderator und jeder Admin ist selbstständig in der Lage Nutzer zu bannen, zu kicken oder auf andere Weise zu maßregeln! Abgesehen von Banns, können diese Entscheidungen auch nicht angezweifelt oder rückgängig gemacht werden. In diesen Fällen steht kein Admin über einem Moderator.
-3. Sollte ein Bann ungerechtfertigt erfolgt sein, so melde das bitte [hier](report.php). Dieser Bericht wird anschließend an alle Admin weitergeleitet und diese entscheiden dann über weitere Schritte.
+3. Sollte ein Bann ungerechtfertigt erfolgt sein, so melde das bitte [hier](report.php). Dieser Bericht wird anschließend an alle Admin weitergeleitet (außer du beschwerst dich über einen Admin, dann wird dieser ausgeschlossen) und diese entscheiden dann über weitere Schritte.
 4. Solltest du einen völlig rechtmäßigen Bann melden, so kann das einen, wenn nicht schon geschehen, permanenten Bann vom TeamSpeak³ nach sich ziehen, oder, in besonders schweren Fällen auch einen serverweiten Bann.
 
 

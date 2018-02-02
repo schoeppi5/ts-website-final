@@ -1,4 +1,5 @@
 <?php
+	include("./custom/custom.php");
 	include("header.php");
 	include("include/nav.php");
 ?>
@@ -20,7 +21,7 @@
 							<div class="ts-col-right" id="ts-country"></div>
 						</li>
 						<li>
-							<a href="teamspeak.php" title="View TeamSpeak-Server" class="ts-look" ><?php echo $config["interaction"]["ts_btn"] ?></a>
+							<a href="teamspeak.php" title="<?php echo $config["general"]["ts_join_tip"]?>" class="ts-look" ><?php echo $config["interaction"]["ts_btn"] ?></a>
 						</li>
 					</ul>
 				</div>
@@ -104,7 +105,7 @@
 										{
 											var pos1 = content.indexOf('<span id="get">');
 											content = content.slice(pos1 + 15);
-											if(content)
+											if(content.length > 10)
 											{
 												$('#gm').html(content);
 											}
@@ -129,7 +130,7 @@
 										{
 											var pos1 = content.indexOf('<span id="get">');
 											content = content.slice(pos1 + 15);
-											if(content)
+											if(content.length > 10)
 											{
 												$('#gm').html(content);
 											}
@@ -152,7 +153,7 @@
 										{
 											var pos1 = content.indexOf('<span id="get">');
 											content = content.slice(pos1 + 15);
-											if(content)
+											if(content.length > 10)
 											{
 												$('#gm').html(content);
 											}
@@ -179,7 +180,7 @@
 										{
 											var pos1 = content.indexOf('<span id="get">');
 											content = content.slice(pos1 + 15);
-											if(content)
+											if(content.length > 10)
 											{
 												$('#mc').html(content);
 											}
@@ -204,7 +205,7 @@
 										{
 											var pos1 = content.indexOf('<span id="get">');
 											content = content.slice(pos1 + 15);
-											if(content)
+											if(content.length > 10)
 											{
 												$('#mc').html(content);
 											}
@@ -227,7 +228,7 @@
 										{
 											var pos1 = content.indexOf('<span id="get">');
 											content = content.slice(pos1 + 15);
-											if(content)
+											if(content.length > 10)
 											{
 												$('#mc').html(content);
 											}
@@ -260,27 +261,50 @@
 						$result = $statement->execute(array('p' => $power));
 						while($userShow = $statement->fetch())
 						{
-							if(isset($_SESSION["userID"]))
+							try
 							{
-								if(!($userShow["username"] == $user['username']))
+								$ts3_VirtualServer = TeamSpeak3::factory("serverquery://".$config["ts"]["username"].":".$config["ts"]["password"]."@".$config["ts"]["host"].":".$config["ts"]["queryport"]."/?server_port=".$config["ts"]["port"]);
+								try
 								{
-									try
+									switch($power)
 									{
-										$ts3_VirtualServer = TeamSpeak3::factory("serverquery://".$config["ts"]["username"].":".$config["ts"]["password"]."@".$config["ts"]["host"].":".$config["ts"]["queryport"]."/?server_port=".$config["ts"]["port"]);
-										$id = $ts3_VirtualServer->clientGetByUid($userShow["cuid"])['clid'];
-										$online = '<span class="user-right" style="color: #2dfc16">online</span>';
+										case 3: $image = getImage($ts3_VirtualServer->serverGroupGetbyId($config["ts"]["adminGroupId"]));
+												break;
+										case 2: $image = getImage($ts3_VirtualServer->serverGroupGetbyId($config["ts"]["moderatorGroupId"]));
+												break;
+										case 1: $image = getImage($ts3_VirtualServer->serverGroupGetbyId($config["ts"]["memberGroupId"]));
+												break;
 									}
-									catch(Exception $e)
+								}
+								catch(Exception $e)
+								{
+									$image = "";
+								}
+								if(isset($_SESSION["userID"]))
+								{
+									if(!($userShow["username"] == $user['username']))
 									{
-										$id = "";
-										$online = '<span class="user-right" style="color: #ed2d2d">offline</span>';
+										try
+										{
+											$id = $ts3_VirtualServer->clientGetByUid($userShow["cuid"])['clid'];
+											$online = '<span class="user-right" style="color: #2dfc16">online</span>';
+										}
+										catch(Exception $e)
+										{
+											$id = "";
+											$online = '<span class="user-right" style="color: #ed2d2d">offline</span>';
+										}
+										echo '<div class="user" cid="'.$userShow["username"].'"><span class="user-left">'.$image.$userShow["username"].'</span>'.$online.'</div>';
 									}
-									echo '<div class="user" cid="'.$userShow["username"].'"><span class="user-left">'.$userShow["username"].'</span>'.$online.'</div>';
+								}
+								else
+								{
+									echo '<div class="user"><span class="user-left">'.$image.$userShow["username"].'</span></div>';
 								}
 							}
-							else
+							catch(Exception $e)
 							{
-								echo '<div class="user"><span>'.$userShow["username"].'</span></div>';
+								echo '<div class="user"><span class="user-left">'.$userShow["username"].'</span></div>';
 							}
 						}
 					}

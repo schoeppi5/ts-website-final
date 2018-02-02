@@ -17,7 +17,18 @@
 	{
 		if(strcmp($log['state'], "WARNING") == 0)
 		{
-			$response .= '<tr class="fetched-row" style="background-color: #faff00">';
+			$response .= '<tr class="fetched-row" style="background-color: #faff00" onclick="deleteLogEntry(this)">';
+			$response .= "<td class='username'>".$log['username']."</td>";
+			$response .= "<td class='flag'>".$log['state']."</td>";
+			$response .= "<td class='msg'>".$log['msg']."</td>";
+			$response .= "<td class='time'>".$log['timestamp']."</td>";
+			$response .= '<tr>';
+			$response .= '<br />';
+			$count++;
+		}
+		elseif(strcmp($log['state'], "REPORT") == 0)
+		{
+			$response .= '<tr class="fetched-row" style="background-color: #ed2d2d" onclick="deleteLogEntry(this)">';
 			$response .= "<td class='username'>".$log['username']."</td>";
 			$response .= "<td class='flag'>".$log['state']."</td>";
 			$response .= "<td class='msg'>".$log['msg']."</td>";
@@ -28,7 +39,7 @@
 		}
 		else
 		{
-			$response .= '<tr class="fetched-row">';
+			$response .= '<tr class="fetched-row" onclick="deleteLogEntry(this)">';
 			$response .= "<td class='username'>".$log['username']."</td>";
 			$response .= "<td class='flag'>".$log['state']."</td>";
 			$response .= "<td class='msg'>".$log['msg']."</td>";

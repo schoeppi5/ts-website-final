@@ -247,12 +247,17 @@
 .user {
 	float: left; 
 	width: 100%;
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	background-color: #a4a5a4;
 	padding: 5px;
 	margin-bottom: 20px;
 	text-align: left;
 	cursor: pointer;
+}
+
+.user img {
+	margin-top: calc(1.5rem / 2);
+	margin-right: 10px;
 }
 
 .user-right {

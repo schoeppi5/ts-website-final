@@ -55,6 +55,7 @@
 		<link rel="stylesheet" href="style/register.css" type="text/css" />
 		<link rel="stylesheet" href="style/chat.css" type="text/css" />
 		<link rel="stylesheet" href="style/news.css" type="text/css" />
+		<link rel="stylesheet" href="style/rcon.css" type="text/css" />
 		
 		<!--Animate.css by Daniel Eden-->
 		<link rel="stylesheet" href="style/animate.css" type="text/css" />
