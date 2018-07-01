@@ -6,6 +6,7 @@
 
 		/*Navi-bar*/
 		$config["general"]["nav1"] 				= "Rules";
+		$config["general"]["nav2"] 				= "Report";
 		$config["general"]["lang"] 				= "language";
 		$config["general"]["home"]				= "home";
 		
@@ -39,6 +40,24 @@
 		$config["interaction"]["tip_uid"]		= "You can retrieve your unique identifier in your identity settings!";
 		$config["interaction"]["register_btn"]	= "Register";
 		
+		/*Report*/
+		$config["error"]["user_unknown"]		= "Unknown!";
+		$config["error"]["self_report"]			= "You can not report yourself!";
+		$config["general"]["report_thanks"]		= "Thank you for bringing this issue to our attention!";
+		$config["general"]["report_title"]		= "Report";
+		$config["general"]["report_name"]		= "Name:";
+		$config["general"]["report_name_holder"]= "Please enter your name";
+		$config["general"]["report_reason"]		= "Reason:";
+		$config["general"]["reason_1"]			= "Ban";
+		$config["general"]["reason_2"]			= "Misbehaviour";
+		$config["general"]["reason_3"]			= "Unreasonable Punishment";
+		$config["general"]["reason_4"]			= "Annoying User";
+		$config["general"]["report_concern"]	= "Concerning user:";
+		$config["general"]["concern_holder"]	= "Please enter the concerning users name";
+		$config["general"]["report_annotation"]	= "Annotation:";
+		$config["general"]["annotation_holder"]	= "Do you want to add something to your report?";
+		$config["interaction"]["report_submit"]	= "Report";
+		
 		/*E-Mail verification*/
 		/***Generated E-Mail***/
 		$config["email"]["title"]				= "Verify your E-Mail address";
@@ -56,6 +75,7 @@
 		$config["general"]["ts_address"]		= "Address";
 		$config["general"]["ts_users_online"]	= "Users online";
 		$config["general"]["ts_country"]		= "Country";
+		$config["general"]["ts_join_tip"]		= "Show TeamSpeak-Server";
 		$config["interaction"]["ts_btn"]		= "Take a look";
 		$config["error"]["ts_not_found"]		= "Can&apos;t connect to server!";
 		/***Login form***/

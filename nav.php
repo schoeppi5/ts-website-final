@@ -28,6 +28,12 @@
 				<li class="right drop" id="login-container"><a style="cursor: pointer" id="login-btn"><?php if(isset($_SESSION['userID']) && isset($user['email'])){echo $user['email'];}else {echo 'login';}?></a>
 					<?php if($error == "nothing"){?><div class="login"><?php } else { ?><div class="login show"><?php } ?>
 						<?php
+							if(isset($_SESSION['userID']))
+							{
+								$statement = $pdo->prepare("SELECT * FROM user WHERE uniqueID = :uid");
+								$statement->execute(array("uid" => $_SESSION['userID']));
+								$user = $statement->fetch();
+							}
 							if(isset($_SESSION['userID']) && isset($user['email'])){
 								include('include/logged.php');
 							}

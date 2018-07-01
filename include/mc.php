@@ -20,7 +20,14 @@
 	{
 		$Query = new MinecraftQuery();							
 		$Ping = new MinecraftPing($config['mc']['host'], $config['mc']['port']);
-		$Query->Connect( $config['mc']['host'], $config['mc']['queryPort'], 10);
+		if(isset($_POST['init']))
+		{
+			$Query->Connect( $config['mc']['host'], $config['mc']['queryPort'], 3);
+		}
+		else
+		{
+			$Query->Connect( $config['mc']['host'], $config['mc']['queryPort'], 8);
+		}
 		$result = $Ping->Query();
 		
 		$info = $Query->GetInfo();
@@ -30,11 +37,11 @@
 		<img width="64" height="64" alt="favicon" src="'.$result['favicon'].'" /><br />'.$config["general"]["gameserver_players"].' '.$info['Players'].'/'
 		.$info['MaxPlayers'].'</span><span class="server-address col-right" style="color: #2dfc16">'.$info['HostIp'].':'.$info['HostPort'].'</span>';
 	}
-	catch( MinecraftQueryException $e )
+	catch(Exception $e)
 	{
 		if(isset($_POST['init']))
 		{
-			$result .= '<span class="server-offline" style="color: #ed2d2d">'.$config["error"]["server_mc_offline"].'</span>';
+			$response .= '<span class="server-offline" style="color: #ed2d2d">'.$config["error"]["server_mc_offline"].'</span>';
 		}
 		else
 		{

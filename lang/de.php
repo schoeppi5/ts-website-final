@@ -6,6 +6,7 @@
 
 		/*Navi-bar*/
 		$config["general"]["nav1"] 				= "Regeln";
+		$config["general"]["nav2"] 				= "Melden";
 		$config["general"]["lang"] 				= "Sprache";
 		$config["general"]["home"]				= "home";
 		
@@ -39,6 +40,24 @@
 		$config["interaction"]["tip_uid"]		= "Du kannst deine eindeutige Identifikation im TeamSpeak Client unter Identitäten nachschauen!";
 		$config["interaction"]["register_btn"]	= "Registrieren";
 		
+		/*Report*/
+		$config["error"]["user_unknown"]		= "Unbekannt!";
+		$config["error"]["self_report"]			= "Du kannst dich nicht selbst melden!";
+		$config["general"]["report_thanks"]		= "Danke, dass du uns auf dieses Problem aufmerksam gemacht hast!";
+		$config["general"]["report_title"]		= "Melden";
+		$config["general"]["report_name"]		= "Name:";
+		$config["general"]["report_name_holder"]= "Bitte gebe deinen Namen ein";
+		$config["general"]["report_reason"]		= "Grund:";
+		$config["general"]["reason_1"]			= "Bann";
+		$config["general"]["reason_2"]			= "Fehlverhalten";
+		$config["general"]["reason_3"]			= "Unbegründete Strafe";
+		$config["general"]["reason_4"]			= "Nervender Benutzer";
+		$config["general"]["report_concern"]	= "Betreffender Nutzer:";
+		$config["general"]["concern_holder"]	= "Bitte gebe den Nutzernamen des betreffenden Nutzers ein";
+		$config["general"]["report_annotation"]	= "Anmerkung:";
+		$config["general"]["annotation_holder"]	= "Willst du deiner Meldung noch etwas hinzufügen?";
+		$config["interaction"]["report_submit"]	= "Melden";
+		
 		/*E-Mail verification*/
 		/***Generated E-Mail***/
 		$config["email"]["title"]				= "Bitte bestätige deine E-Mail";
@@ -56,6 +75,7 @@
 		$config["general"]["ts_address"]		= "Addresse";
 		$config["general"]["ts_users_online"]	= "Nutzer online";
 		$config["general"]["ts_country"]		= "Land";
+		$config["general"]["ts_join_tip"]		= "TeamSpeak Server anzeigen";
 		$config["interaction"]["ts_btn"]		= "Ansehen";
 		$config["error"]["ts_not_found"]		= "Verbindung zum Server nicht möglich!";
 		/***Login form***/
